@@ -18,7 +18,7 @@ test("Auto Suggest Dropdown Handling", async ({page}) => {
     const searchText:string = await options.nth(i).textContent();
     console.log("Options datas.... => ", searchText)
     if(searchText === 'smartphone'){
-      options.nth(i).click();
+      await options.nth(i).click();
       break;
     }
   }
